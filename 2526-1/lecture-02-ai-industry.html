@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Lecture 2: AI in Industry</title>
+
+  <link rel="stylesheet" href="revealjs/dist/reset.css">
+  <link rel="stylesheet" href="revealjs/dist/reveal.css" />
+  <link rel="stylesheet" href="revealjs/dist/theme/white.css" />
+
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+  <link rel="stylesheet" href="lecture-style.css">
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Title Slide -->
+      <section>
+        <h1>Introduction to AI</h1>
+        <h3>Session: AI in Industry</h3>
+        <div>
+          <p><strong>Lecturers:</strong> Nguyen Thuy Linh, Dao Viet Anh</p>
+          <p><strong>Semester:</strong> 2025-2026-1</p>
+          <p>Institute for AI, VNU-UET</p>
+        </div>
+      </section>
+
+      <!-- Learning Objectives -->
+      <section data-markdown>
+        <textarea data-template>
+        ## Learning Objectives
+        - Explain why AI is transforming a range of industries
+        - Give specific examples of how AI technology affects industries
+        </textarea>
+      </section>
+
+      <!-- Review Prior Lesson -->
+      <section data-markdown>
+        <textarea data-template>
+        ## Review Prior Lesson
+        - Defined AI, Machine Learning (ML), and Deep Learning (DL)
+        - Discussed AI’s key historical developments
+        - Showed the cyclical nature of AI’s public perception, funding, and interest
+        - Differentiated modern AI from prior AI
+        - Illustrated various applications of AI
+        </textarea>
+      </section>
+
+      <!-- Why This Era is Different -->
+      <section data-markdown>
+        <textarea data-template>
+        ## Why This Era of AI is Different
+        - Cutting edge results in many fields
+        - Bigger datasets
+        - Faster computers
+        - Neural networks
+        </textarea>
+      </section>
+
+      <!-- Healthcare -->
+      <section>
+        <section>
+          <h2>Healthcare: Medical Diagnosis</h2>
+        </section>
+        <section>
+          <div class="container">
+            <div class="col" data-markdown>
+              <textarea data-template>
+                  ### Traditionally
+                  - Many symptoms are nonspecific
+                  - Diagnosis by process of elimination (inefficient, inexact)
+                  <!-- <img src="images/lec2/traditional-healthcare.png"> -->
+                </textarea>
+            </div>
+            <div class="col" data-markdown>
+              <textarea data-template="">
+                  ![Alt text](images/lec2/traditional-healthcare.png "Optional title text")
+                </textarea>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="container">
+            <div class="col" data-markdown>
+              <textarea data-template>
+              ### Now with AI
+              - Use of large medical datasets
+              - Computer vision algorithms for diagnosis
+              </textarea>
+            </div>
+            <div class="col" data-markdown>
+              <textarea data-template="">
+                  ![Alt text](images/lec2/ai-healthcare.png "Optional title text")
+                </textarea>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="container">
+            <div class="col" data-markdown>
+              <textarea data-template>
+              ### Example: Breast Cancer (2016)
+              - Harvard Medical School researchers used DL on lymph node images
+              - Combined AI + human pathologists gave lowest error rate
+              </textarea>
+            </div>
+            <div class="col" data-markdown>
+              <textarea data-template="">
+                  ![Alt text](images/lec2/example-healthcare.png "Optional title text")
+                </textarea>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section>
+        <section>
+          <h2>Healthcare: Treatment Protocol</h2>
+        </section>
+        <section>
+          <div class="container">
+            <div class="col" data-markdown>
+              <textarea data-template>
+        ### Traditionally
+        - Doctors would diagnose a condition and recommend a
+treatment based on what historically worked for most people.
+        - Some considerations for
+population/demographics
+        - Difficult to create custom treatments
+without extensive research/cost
+        </textarea>
+            </div>
+            <!-- <div class="col" data-markdown>
+              <textarea data-template="">
+                  ![Alt text](images/lec2/example-healthcare.png "Optional title text")
+                </textarea>
+            </div> -->
+          </div>
+        </section>
+        <section>
+          <div class="container">
+            <div class="col" data-markdown>
+<textarea data-template>
+        ### Now with AI
+        - Doctors can tailor treatments to individual patients.
+        - Large medical datasets
+        - ML and DL algorithms
+        - Population/demographics
+analysis/simulations
+        </textarea>
+            </div>
+            <!-- <div class="col" data-markdown>
+              <textarea data-template="">
+                  ![Alt text](images/lec2/example-healthcare.png "Optional title text")
+                </textarea>
+            </div> -->
+          </div>
+        </section>
+        <section>
+          <div class="container">
+            <div class="col" data-markdown>
+<textarea data-template>
+        ### Example : ICU Intervene (MIT)
+        - Uses ICU data, from vitals, labs, notes, to
+determine how to treat specific symptoms.
+        - Makes real-time predictions from DL models,
+to provide recommendations for patients.
+        - Forecasts predictions into the future
+(a few hours) compared to traditional
+methods (a few minutes).
+        - Predictions can be run on common GPU and
+CPU hardware.
+        </textarea>
+            </div>
+            <!-- <div class="col" data-markdown>
+              <textarea data-template="">
+                  ![Alt text](images/lec2/example-healthcare.png "Optional title text")
+                </textarea>
+            </div> -->
+          </div>
+        </section>
+      </section>
+
+      <section>
+        <section>
+          <h2>Healthcare: Drug Discovery</h2>
+        </section>
+        <section data-markdown><textarea data-template>
+        ### Traditionally
+        - Drug discovery costs billions, takes decades
+        - 9/10 attempts fail
+        </textarea></section>
+        <section data-markdown><textarea data-template>
+        ### Now with AI
+        - AI explores huge chemical space (10^20 molecules)
+        - Graph networks predict compound-disease efficacy (HetioNet, UCSF)
+        </textarea></section>
+      </section>
+
+      <section>
+        <section>
+          <h2>Healthcare: Surgery</h2>
+        </section>
+        <section data-markdown><textarea data-template>
+        ### Traditionally
+        - Surgery risks: anesthesia effects, complications
+        </textarea></section>
+        <section data-markdown><textarea data-template>
+        ### Now with AI
+        - Computer vision assists surgeons
+        - Predict steps, identify complications, warn in advance
+        - Live remote expert advice possible
+        </textarea></section>
+      </section>
+
+      <!-- Genomics -->
+      <section>
+        <section>
+          <h2>Genomics</h2>
+        </section>
+        <section data-markdown><textarea data-template>
+        - Genome sequencing cost $100M in 2001, 13 years
+        - High-throughput sequencing (2003) improved speed
+        - AI reduces cost & increases accuracy
+        - Example: Google DeepVariant, 99.958% accuracy
+        </textarea></section>
+      </section>
+
+      <!-- Transportation -->
+      <section>
+        <section>
+          <h2>Transportation: Autonomous Cars</h2>
+        </section>
+        <section data-markdown><textarea data-template>
+        ### Traditionally
+        - Human error = main cause of accidents
+        - Traffic jams due to self-interest driving
+        </textarea></section>
+        <section data-markdown><textarea data-template>
+        ### Now with AI
+        - Self-driving cars detect signs, lanes, landmarks
+        - Use LIDAR, RADAR, mapping + DL
+        - Example: Waymo (Alphabet) — billions of simulated miles
+        </textarea></section>
+      </section>
+
+      <section>
+        <section>
+          <h2>Transportation: Automated Trucking</h2>
+        </section>
+        <section data-markdown><textarea data-template>
+        - Truck driver shortages & health issues
+        - AI trucks coordinate to save fuel, reduce collisions
+        - Use video, LIDAR, accelerometers
+        </textarea></section>
+      </section>
+
+      <!-- Retail -->
+      <section>
+        <section>
+          <h2>Retail & Food Retail</h2>
+        </section>
+        <section data-markdown><textarea data-template>
+        - Retail faces competition & bankruptcies ("Amazon effect")
+        - AI improves supply chain, predicts demand
+        - Personalized recommendations via Watson, ML agents
+        - Example: North Face with Watson XPS assistant
+        - Food: Vivanda FlavorPrint program forecasts demand
+        </textarea></section>
+      </section>
+
+      <!-- Finance -->
+      <section>
+        <section>
+          <h2>Finance</h2>
+        </section>
+        <section data-markdown><textarea data-template>
+        - Fraud detection: from rule-based → ML behavioral baselines
+        - Example: Sift Science fraud consortium
+        - Risk management: ML portfolio tailoring
+        - Example: ZestFinance credit scoring with many features
+        - Stock trading: DL + massive datasets, Sentient LEAF framework
+        </textarea></section>
+      </section>
+
+      <!-- Agriculture -->
+      <section>
+        <section>
+          <h2>Agriculture</h2>
+        </section>
+        <section data-markdown><textarea data-template>
+        - Need 70% more food by 2050
+        - AI robots harvest crops, kill weeds (90% herbicide reduction)
+        - Example: TellusLabs yield predictions via satellite + DL
+        </textarea></section>
+      </section>
+
+      <!-- Manufacturing -->
+      <section>
+        <section>
+          <h2>Manufacturing</h2>
+        </section>
+        <section data-markdown><textarea data-template>
+        - Predictive maintenance with IoT sensors (GE turbines)
+        - Computer vision detects tiny cracks in parts
+        - Automating garment industry with "sewbots"
+        </textarea></section>
+      </section>
+
+      <!-- Government -->
+      <section>
+        <section>
+          <h2>Government</h2>
+        </section>
+        <section data-markdown><textarea data-template>
+        - Smart cities: adaptive signals, license plate recognition
+        - Cybersecurity: Deep Instinct DL-based attack detection
+        - Education: adaptive learning, automated grading
+        </textarea></section>
+      </section>
+
+      <!-- Oil and Gas -->
+      <section>
+        <section>
+          <h2>Oil and Gas</h2>
+        </section>
+        <section data-markdown><textarea data-template>
+        - Shrinking reserves, need optimization
+        - AI forecasts drilling sites (economic, weather, seismic data)
+        - Example: ExxonMobil & MIT — AI submersible robots
+        </textarea></section>
+      </section>
+
+      <!-- Other Applications -->
+      <section>
+        <section>
+          <h2>Other Applications</h2>
+        </section>
+        <section data-markdown><textarea data-template>
+        - Customer service: AI assistants, routing, automation
+        - Music: "I AM AI" album (2017), DL-based generation
+        - Gaming: Forza 5 Drivatar, reinforcement learning characters
+        </textarea></section>
+      </section>
+
+      <!-- Recap -->
+      <section data-markdown>
+        <textarea data-template>
+        ## Recap
+        - Why AI is transforming industries
+        - Industry-specific examples: healthcare, genomics, transport, retail, finance, agriculture, manufacturing, government, oil & gas, customer service, music, gaming
+        </textarea>
+      </section>
+
+      <!-- Footer -->
+      <div class="footer">
+        Intro to AI (2526-1) §2: AI in Industry
+      </div>
+    </div>
+  </div>
+  <script src="revealjs/dist/reveal.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script src="plugin/math/math.js"></script>
+  <script>
+    Reveal.initialize({
+      controlsLayout: "edges",
+      slideNumber: true,
+      hashOneBasedIndex: true,
+      hash: true,
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX],
+    });
+  </script>
+</body>
+
+</html>
