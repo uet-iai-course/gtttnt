@@ -118,6 +118,13 @@
             </div>
           </div>
         </section>
+        <section data-markdown>
+          <textarea data-template>
+            ### Reference
+
+            [![Harvard Medical School researchers used DL on lymph node images](https://img.youtube.com/vi/dEHMymjGT8I/0.jpg)](https://www.youtube.com/watch?v=dEHMymjGT8I "Harvard Medical School researchers used DL on lymph node images")
+          </textarea>
+        </section>
       </section>
 
       <section>
@@ -186,22 +193,74 @@ CPU hardware.
             </div> -->
           </div>
         </section>
+        <section data-markdown>
+          <textarea data-template>
+            ### Reference
+
+            [MIT use ML to predict ICU Intervention](https://www.healthdatamanagement.com/articles/mit-researchers-use-machine-learning-to-predict-icu-interventions)
+          </textarea>
+        </section>
       </section>
 
       <section>
         <section>
           <h2>Healthcare: Drug Discovery</h2>
         </section>
-        <section data-markdown><textarea data-template>
+
+        <section>
+          <div class="container">
+            <div class="col" data-markdown>
+                    <textarea data-template>
         ### Traditionally
-        - Drug discovery costs billions, takes decades
-        - 9/10 attempts fail
-        </textarea></section>
+        - The cost has been doubling every
+9 years since 1970 
+        - The drug discovery process can take
+decades
+        - 9 out of 10 drug approval attempts fail
+        - There are currently only 1,500
+approved drugs
+        </textarea>
+            </div>
+            <!-- <div class="col-3" data-markdown>
+              <textarea data-template="">
+                  ![Alt text](images/lec2/drug-healthcare.png "Optional title text")
+                </textarea>
+            </div> -->
+          </div>
+        </section>
+
         <section data-markdown><textarea data-template>
         ### Now with AI
-        - AI explores huge chemical space (10^20 molecules)
-        - Graph networks predict compound-disease efficacy (HetioNet, UCSF)
+        - Companies are leveraging structured and unstructured data
+with AI, to establish a pipeline of new drug discovery. 
+        - There are $10^{20}$ possible drug-like molecules
+        - Massive space for potential discovery
         </textarea></section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ### Example
+            HetioNet drug discovery model, 2016, UCSF,
+Himmelstein and Baranzini.
+            - Developed a graph network to encode
+millions of biomedical reports.
+            - Used ML to predict probability of
+treatment efficacy for ~209,000
+compound-disease pairs.
+            - Provided clear pharmacological
+insights for epilepsy drug discovery
+and treatment.
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ### Reference
+
+            [HetioNet](https://het.io/)
+
+            [![HetioNet](https://img.youtube.com/vi/rp_MxJXvK60/0.jpg)](https://www.youtube.com/watch?v=rp_MxJXvK60 "HetioNet")
+          </textarea>
+        </section>
       </section>
 
       <section>
@@ -210,14 +269,26 @@ CPU hardware.
         </section>
         <section data-markdown><textarea data-template>
         ### Traditionally
+        - Every type of surgery poses possible risks to the patient
         - Surgery risks: anesthesia effects, complications
         </textarea></section>
         <section data-markdown><textarea data-template>
         ### Now with AI
-        - Computer vision assists surgeons
-        - Predict steps, identify complications, warn in advance
-        - Live remote expert advice possible
+        - Computer “vision” leverages data from
+laparoscopic and arthroscopic cameras
+        - Smart systems automate dictation by
+generating notes during the surgery
+        - Surgeons can send point-of-view live feeds
+of the operative site to experts anywhere in
+the world for real-time advice. 
         </textarea></section>
+        <section data-markdown>
+          <textarea data-template>
+            ### Reference
+
+            [![Surgery](https://img.youtube.com/vi/RQxes3TVAms/0.jpg)](https://www.youtube.com/watch?v=RQxes3TVAms "Surgery")
+          </textarea>
+        </section>
       </section>
 
       <!-- Genomics -->
@@ -225,12 +296,115 @@ CPU hardware.
         <section>
           <h2>Genomics</h2>
         </section>
-        <section data-markdown><textarea data-template>
-        - Genome sequencing cost $100M in 2001, 13 years
-        - High-throughput sequencing (2003) improved speed
-        - AI reduces cost & increases accuracy
-        - Example: Google DeepVariant, 99.958% accuracy
-        </textarea></section>
+
+        <section>
+          <div class="container">
+            <div class="col" data-markdown>
+              <textarea data-template>
+        -  In 2001: Full human sequencing
+cost $100 million.
+        - The first genome sequencing
+took ~13 years
+        </textarea>
+            </div>
+            <!-- <div class="col" data-markdown>
+              <textarea data-template="">
+                  ![Alt text](images/lec2/example-healthcare.png "Optional title text")
+                </textarea>
+            </div> -->
+          </div>
+        </section>
+
+        <section>
+          <div class="container">
+            <div class="col" data-markdown>
+              <textarea data-template>
+        - In 2003: High-throughput
+sequencing made the process
+more efficient by leveraging a
+technique called “shotgun
+strategy”. 
+        - The data produced from this
+technique is imperfect and
+errors can be introduced at
+each step in the process
+        </textarea>
+            </div>
+            <!-- <div class="col" data-markdown>
+              <textarea data-template="">
+                  ![Alt text](images/lec2/example-healthcare.png "Optional title text")
+                </textarea>
+            </div> -->
+          </div>
+        </section>
+
+        <section>
+          <div class="container">
+            <div class="col" data-markdown>
+              <textarea data-template>
+        ### Now with AI
+        - Sequence
+companies are employing AI
+techniques to reduce cost and
+increase accuracy. 
+population/demographics
+        - Illumina claims that within the
+near future sequencing will
+only take 1 hour and cost only
+$100
+        </textarea>
+            </div>
+            <!-- <div class="col" data-markdown>
+              <textarea data-template="">
+                  ![Alt text](images/lec2/example-healthcare.png "Optional title text")
+                </textarea>
+            </div> -->
+          </div>
+        </section>
+
+      <section>
+          <div class="container">
+            <div class="col" data-markdown>
+              <textarea data-template>
+        ### Example
+        - Google’s DeepVariant* sequencing
+        - Leverages massive data sets together with DL
+to identify all variants
+        - Accuracy on genome classification: 99.958 %
+        - Availability as open source code promises to
+revolutionize the industry
+        </textarea>
+            </div>
+            <!-- <div class="col" data-markdown>
+              <textarea data-template="">
+                  ![Alt text](images/lec2/example-healthcare.png "Optional title text")
+                </textarea>
+            </div> -->
+          </div>
+        </section>
+
+<section>
+          <div class="container">
+            <div class="col" data-markdown>
+              <textarea data-template>
+        ### Reference
+        
+        [Google DeepVariant](https://github.com/google/deepvariant)
+
+        [![Google DeepVariant](https://img.youtube.com/vi/pZEMSBmoyi0/0.jpg)](https://www.youtube.com/watch?v=pZEMSBmoyi0 "Google DeepVariant")
+
+        [Alpha Genome](https://deepmind.google/discover/blog/alphagenome-ai-for-better-understanding-the-genome/)
+
+        </textarea>
+            </div>
+            <!-- <div class="col" data-markdown>
+              <textarea data-template="">
+                  ![Alt text](images/lec2/example-healthcare.png "Optional title text")
+                </textarea>
+            </div> -->
+          </div>
+        </section>
+
       </section>
 
       <!-- Transportation -->
@@ -240,25 +414,72 @@ CPU hardware.
         </section>
         <section data-markdown><textarea data-template>
         ### Traditionally
-        - Human error = main cause of accidents
-        - Traffic jams due to self-interest driving
+        - The leading cause of automobile
+accidents is human error
+        - One of the primary sources of traffic
+jams is each driver acting out of
+self-interest, that prevents traffic flow 
+        - Part of the population who can’t drive:
+children, the elderly, and the disabled
         </textarea></section>
         <section data-markdown><textarea data-template>
         ### Now with AI
-        - Self-driving cars detect signs, lanes, landmarks
-        - Use LIDAR, RADAR, mapping + DL
-        - Example: Waymo (Alphabet) — billions of simulated miles
+        - Cars identify stop signs, lane lines, and
+other landmarks via DL tools
+        - Mapping technology can use computer
+vision to detect addresses
+        - Cars triangulate and can use other 3Dsensing technologies, such as LIDAR
+and RADAR
         </textarea></section>
+
+        <section data-markdown><textarea data-template>
+        ### Example
+        - Waymo, the autonomous vehicle division of Alphabet Inc.
+        - Waymo has been operating
+self-driving minivans without a safety
+driver since October 2017
+        - Waymo’s Carcraft* software
+accelerated the car’s development,
+with 2.5 billion simulated miles driven
+in 2016
+        </textarea></section>
+
+        <section data-markdown><textarea data-template>
+        ### Reference
+        [![Waymo](https://img.youtube.com/vi/BCDJOUljJ3o/0.jpg)](https://www.youtube.com/watch?v=BCDJOUljJ3o "Waymo")
+        </textarea></section>
+        
       </section>
 
       <section>
         <section>
           <h2>Transportation: Automated Trucking</h2>
         </section>
-        <section data-markdown><textarea data-template>
-        - Truck driver shortages & health issues
-        - AI trucks coordinate to save fuel, reduce collisions
-        - Use video, LIDAR, accelerometers
+        <section data-markdown>
+          <textarea data-template>
+          ### Traditionally
+          - Driver turnover rates at some
+companies reach 300%
+          - Truck drivers are twice as likely as
+other workers to be obese and/or
+have diabetes
+          - Truckers are half as likely to have
+health insurance 
+          - The number of accidents and fatalities
+have increased in recent years
+        </textarea></section>
+        <section data-markdown>
+          <textarea data-template>
+          ### Now with AI
+          - Save on fuel, and reduce wind-drag
+and the chance of a collision
+          - Video, LIDAR, and accelerometers are
+used to collect detailed data about
+the truck’s surroundings
+          - Guidance algorithms provide feedback
+for braking, steering, and throttling
+commands, based on incoming and
+historical data
         </textarea></section>
       </section>
 
@@ -268,11 +489,111 @@ CPU hardware.
           <h2>Retail & Food Retail</h2>
         </section>
         <section data-markdown><textarea data-template>
-        - Retail faces competition & bankruptcies ("Amazon effect")
-        - AI improves supply chain, predicts demand
-        - Personalized recommendations via Watson, ML agents
-        - Example: North Face with Watson XPS assistant
-        - Food: Vivanda FlavorPrint program forecasts demand
+        ### Traditionally
+        - The “Amazon effect”: there have been
+nine major retail bankruptcies in 2017
+        - Retailers need to become competitive
+or risk obsolescence
+        - Balancing “out-of-stock” with “over-stock”
+trade-off requires great finesse
+        </textarea></section>
+        <section data-markdown><textarea data-template>
+        ### Now with AI
+        - AI-powered gift concierge learns your
+preferences as you engage, and can help
+predict the appropriate gift to buy
+        - Leveraging ML-trained agents, companies
+are providing recommendations via
+natural language
+        - Companies using AI via Watson* to monitor
+factors from weather to consumer behavior,
+to optimize consumption rate predictions
+        </textarea></section>
+
+        <section data-markdown><textarea data-template>
+        ### Example
+        - The North Face and Watson* are combining massive datasets
+and AI, to bring the brick-and-mortar experience to e-commerce.
+        - The North Face, with Fluid and IBM
+Watson*, has launched XPS* - an AIenabled digital expert that uses a natural
+language interface to help shoppers.
+        - XPS curates and filters the available
+options, so shoppers are more likely
+to make a purchase
+        </textarea></section>
+
+        <section data-markdown><textarea data-template>
+        ### Reference
+        [![Watson](https://img.youtube.com/vi/rybyrISmYsA/0.jpg)](https://www.youtube.com/watch?v=rybyrISmYsA "Watson")
+        </textarea></section>
+      </section>
+
+      <section>
+        <section>
+          <h2>Food Retail</h2>
+        </section>
+                <section>
+          <div class="container">
+            <div class="col" data-markdown>
+              <textarea data-template>
+        ### Traditionally
+        - Restaurants use historical data or “gut-feeling”
+approach to supply chain
+        - This can result in excessive waste
+or food unavailability 
+        </textarea>
+            </div>
+            <!-- <div class="col" data-markdown>
+              <textarea data-template="">
+                  ![Alt text](images/lec2/example-healthcare.png "Optional title text")
+                </textarea>
+            </div> -->
+          </div>
+        </section>
+                <section>
+          <div class="container">
+            <div class="col" data-markdown>
+              <textarea data-template>
+        ### Now with AI
+        - Many companies have started to leverage sophisticated
+algorithms to forecast demand.
+        - Agents can adjust orders with
+trading partners in real time, as
+required for business need
+        </textarea>
+            </div>
+            <!-- <div class="col" data-markdown>
+              <textarea data-template="">
+                  ![Alt text](images/lec2/example-healthcare.png "Optional title text")
+                </textarea>
+            </div> -->
+          </div>
+        </section>
+
+                <section>
+          <div class="container">
+            <div class="col" data-markdown>
+              <textarea data-template>
+        ### Example
+        - Vivanda’s FlavorPrint* program
+        - Based on recipes and consumerprovided data, Vivanda maps data to
+create “digital-taste” identifiers for
+each consumer
+        - Providing ML-based recommendations
+to customers may influence demand
+        </textarea>
+            </div>
+            <!-- <div class="col" data-markdown>
+              <textarea data-template="">
+                  ![Alt text](images/lec2/example-healthcare.png "Optional title text")
+                </textarea>
+            </div> -->
+          </div>
+        </section>
+
+        <section data-markdown><textarea data-template>
+        ### Reference
+        [Vivanda FlavorPrint](https://vivanda.flavorprintlab.com/)
         </textarea></section>
       </section>
 
@@ -282,11 +603,116 @@ CPU hardware.
           <h2>Finance</h2>
         </section>
         <section data-markdown><textarea data-template>
-        - Fraud detection: from rule-based → ML behavioral baselines
-        - Example: Sift Science fraud consortium
-        - Risk management: ML portfolio tailoring
-        - Example: ZestFinance credit scoring with many features
-        - Stock trading: DL + massive datasets, Sentient LEAF framework
+        ### Traditionally
+        - Historically, a predefined rule-set was
+used for fraud identification, but this
+approach misses much of the nuance
+that surrounds fraud 
+        - $1/3$ of falsely identified fraud events
+result in lost customers
+        - In the US, this loss is worth 13 times
+the cost of actual fraud
+        </textarea></section>
+        <section data-markdown><textarea data-template>
+        ### Now with AI
+        - With ML techniques, banks can predict fraud based on a
+behavioral baseline to compare against.
+        - Uses historical shopping data and
+shopping habits of customers.
+        - Compares new data to baseline
+to determine likelihood of fraud.
+        </textarea></section>
+        <section data-markdown><textarea data-template>
+        ### Example
+        - Sift Science
+        - Established a fraud data consortium
+developed from over 6000 websites to
+leverage large-scale real-time ML
+        - Autonomously learns new fraud
+patterns based on billions of user
+actions.
+        </textarea></section>
+        <section data-markdown><textarea data-template>
+        ### Reference
+        [Sift Science](https://sift.com/)
+        </textarea></section>
+      </section>
+
+      <section>
+        <section>
+          <h2>Finance: Risk Management</h2>
+        </section>
+        <section data-markdown><textarea data-template>
+        ### Traditionally
+        - New regulations force tighter control on financial institutions
+        - New business model disruptions
+        - Increasing pressure on costs and
+returns
+        </textarea></section>
+        <section data-markdown><textarea data-template>
+        ### Now with AI
+        - Tailor a financial portfolio to fit the
+goals of the user using ML algorithms.
+        - Financial institutions can develop
+early warning systems for automated
+reporting, portfolio management,
+and recommendations based on ML.
+        </textarea></section>
+        <section data-markdown><textarea data-template>
+        ### Example
+        - ZestFinance
+        - Traditional underwriting systems make
+decisions using few data points.
+        - Those with a limited credit history are
+often denied credit, ultimately leading to
+loss of revenue for lenders. 
+        </textarea></section>
+        <section data-markdown><textarea data-template>
+        ### Reference
+
+        [Zest Finance](https://www.zest.ai/)
+
+        [![Zest Finance](https://img.youtube.com/vi/Fp_fI-HFTqE/0.jpg)](https://www.youtube.com/watch?v=Fp_fI-HFTqE "Zest Finance")
+        </textarea></section>
+      </section>
+
+      <section>
+        <section>
+          <h2>Finance: Stock Trading</h2>
+        </section>
+        <section data-markdown><textarea data-template>
+        ### Traditionally
+        - The speed and volume of information is daunting.
+        - The market is reactionary.
+        - It’s difficult to remain competitive
+while relying on traditional trading
+methods.
+        - Fundamental analysis is unable to
+show the entire financial picture.
+        </textarea></section>
+        <section data-markdown><textarea data-template>
+        ### Now with AI
+        - Companies use massive datasets together with DL methods
+for better forecasting.
+        - Data pulled from financial, political,
+and social media.
+        - Analyst reports combined.
+        </textarea></section>
+        <section data-markdown><textarea data-template>
+        ### Example
+        - Sentient Technologies, and Learning Evolutionary Algorithm
+Framework (LEAF*)
+        - Manages millions of data points to find trends
+and make successful stock trades.
+        - AI algorithms identify and combine
+successful trading patterns.
+        - Successful strategies are tested in the real
+world, evolving autonomously with LEAF.
+        </textarea></section>
+        <section data-markdown><textarea data-template>
+        ### Reference
+
+        [Sentient Technologies](https://www.zdnet.com/article/cognizant-tech-explores-the-evolution-of-ai/)
         </textarea></section>
       </section>
 
@@ -296,10 +722,47 @@ CPU hardware.
           <h2>Agriculture</h2>
         </section>
         <section data-markdown><textarea data-template>
-        - Need 70% more food by 2050
-        - AI robots harvest crops, kill weeds (90% herbicide reduction)
-        - Example: TellusLabs yield predictions via satellite + DL
+        ### Traditionally
+        - Food production will have to increase by
+70% to meet the projected demand.
+        - Most land suitable for farming is already
+being used, hence the needed increase
+must come from higher yields.
+        - Agriculture must feed the world while not
+over-straining Earth’s resources.
         </textarea></section>
+        <section data-markdown><textarea data-template>
+        ### Now with AI
+        - DL-enabled robots are being used to identify
+and kill weeds.
+        - Companies have shown 90% herbicide
+reduction due to “targeted” spray application.
+        - AI-driven genome sequencing advancements
+enables crop “genome” editing.
+        </textarea></section>
+        <section data-markdown><textarea data-template>
+        ### Example
+        - TellusLabs yield predictions
+        - Uses ML together with weather and
+other historical data to forecast yields.
+        - Leverages cloud-based GPUs for DL on
+satellite images.
+        </textarea></section>
+                        <section>
+          <h3>Reference</h3>
+          <div class="container">
+            <div class="col" data-markdown>
+              <textarea data-template>
+                [![TellusLabs](https://img.youtube.com/vi/pRfIIPkaDXk/0.jpg)](https://www.youtube.com/watch?v=pRfIIPkaDXk "TellusLabs")
+        </textarea>
+            </div>
+            <div class="col" data-markdown>
+              <textarea data-template="">
+                  [![Harvesting Robot](https://img.youtube.com/vi/V-dV_PSArPw/0.jpg)](https://www.youtube.com/watch?v=V-dV_PSArPw "Harvesting Robot")
+                </textarea>
+            </div>
+          </div>
+        </section>
       </section>
 
       <!-- Manufacturing -->
@@ -308,22 +771,182 @@ CPU hardware.
           <h2>Manufacturing</h2>
         </section>
         <section data-markdown><textarea data-template>
-        - Predictive maintenance with IoT sensors (GE turbines)
-        - Computer vision detects tiny cracks in parts
-        - Automating garment industry with "sewbots"
+        ### Traditionally
+        - Relied on historical data to provide basis for preventative
+maintenance schedule. 
+        - Conservative approach: parts were
+replaced well before failure, and
+thus financially inefficient.
+        - Flawed due to inability to predict
+new failure modes.
         </textarea></section>
+        <section data-markdown><textarea data-template>
+        ### Now with AI
+        - Internet of Things (IoT) sensors help to optimize
+maintenance scheduling.
+        - Part replacement schedule is
+optimized by assessing
+anomalies and failure patterns. 
+        - Safety and productivity can
+increase exponentially.
+        </textarea></section>
+        <section data-markdown><textarea data-template>
+        ### Example 1
+        - AI with General Electric.
+        - GE is the industry leader for Internet of
+Things (IoT) sensor installations on engines
+and turbines, and plans to have 60,000
+engines connected to the internet by 2020
+        - Computer vision cameras and
+reinforcement learning algorithms find tiny
+cracks or damage.
+        - Sensor data and AI allows GE to track
+performance and optimize part
+replacement.
+        </textarea></section>
+        <section data-markdown><textarea data-template>
+        ### Example 2
+        - Computer vision for fault detection on solar panels
+        - DL algorithm trained on labelled data of
+correctly manufactured vs. flawed panels
+        - Reduced the need for human inspection
+by 66% compared to historical need
+        </textarea></section>
+        <section data-markdown><textarea data-template>
+        ### Example 3
+        - SoftWear Automation’s ”sewbots”.
+        - Computer vision is used to track fabric
+at the thread level.
+        - Eliminates need for human
+seamstress / seamster.
+        - Allows designers to create garments
+that were previously thought to be too
+complicated or specialized to construct.
+        </textarea></section>
+                        <section>
+          <h3>Reference 1</h3>
+          <div class="container">
+            <div class="col" data-markdown>
+              <textarea data-template>
+                [![AI Manufacturing](https://img.youtube.com/vi/EzJtzrD4WBM/0.jpg)](https://www.youtube.com/watch?v=EzJtzrD4WBM "AI Manufacturing")
+        </textarea>
+            </div>
+            <div class="col" data-markdown>
+              <textarea data-template="">
+                  [![GE](https://img.youtube.com/vi/zqMo_Wi1KKk/0.jpg)](https://www.youtube.com/watch?v=zqMo_Wi1KKk "GE")
+                </textarea>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h3>Reference 2</h3>
+          <div class="container">
+            <div class="col" data-markdown>
+              <textarea data-template>
+                [![Solar Panel](https://img.youtube.com/vi/Cpq2V5pdusA/0.jpg)](https://www.youtube.com/watch?v=Cpq2V5pdusA "Solar Panel")
+        </textarea>
+            </div>
+            <div class="col" data-markdown>
+              <textarea data-template="">
+                  [![Circuit Robot](https://img.youtube.com/vi/ltdJ1Sp_Pog/0.jpg)](https://www.youtube.com/watch?v=ltdJ1Sp_Pog "Circuit")
+                </textarea>
+            </div>
+          </div>
+        </section>
       </section>
 
       <!-- Government -->
       <section>
         <section>
-          <h2>Government</h2>
+          <h2>Government: Smart Cities</h2>
         </section>
         <section data-markdown><textarea data-template>
-        - Smart cities: adaptive signals, license plate recognition
-        - Cybersecurity: Deep Instinct DL-based attack detection
-        - Education: adaptive learning, automated grading
+        ### Traditionally
+        - As of 2008, for the first time in history, half of
+the world’s population resides in cities.
+        - There are heightened demands on
+scarce resources.
+        - Simultaneously, a large part of
+existing infrastructure is underutilized
+or not being used efficiently.
         </textarea></section>
+        <section data-markdown><textarea data-template>
+        ### Now with AI
+        - AI techniques are used to analyze photo and video data to
+perform studies of pedestrian and traffic trends. 
+        - Adaptive signal control: allows traffic
+lights to tailor their timing based on
+real-time data.
+        - With license plate recognition, and DL
+technology, cities can not only optimize
+parking but can also track criminals.
+        </textarea></section>
+        <section data-markdown><textarea data-template>
+        ### Example 1
+        - AT&T reimagines smart cities
+        - AT&T developed a framework to help
+cities integrate Internet of Things (IoT)
+sensors with AI.
+        - Remotely monitor the condition of
+roads, bridges, buildings.
+        - Assist with public safety.
+        - Notify police if gunfire has gone off,
+by using sound detection.
+        </textarea></section>
+         <section data-markdown><textarea data-template>
+        ### Example 2
+        - Deep Instinct for cybersecurity of Gov
+        - Uses GPU-based neural network to
+achieve 99% detection rates for even the
+most advanced cyber attacks.
+        - DeepInstinct’s DL models have the ability
+to detect patterns - mostly designed by
+humans - enabling the prediction of
+pending cyber attack.
+        </textarea></section>
+         <section data-markdown><textarea data-template>
+        ### Example 3
+        - Adaptive learning systems, and grading for education
+        - Learning analytics track student
+performance and provide tailored
+educational programs.
+        - Using natural language processing
+and ML models, AI programs can be
+used for long answer and essay
+grading.
+        </textarea></section>
+                        <section>
+          <h3>Reference 1</h3>
+          <div class="container">
+            <div class="col" data-markdown>
+              <textarea data-template>
+                [![AT&T](https://img.youtube.com/vi/NcAZBu8z90U/0.jpg)](https://www.youtube.com/watch?v=NcAZBu8z90U "AT&T")
+        </textarea>
+            </div>
+            <div class="col" data-markdown>
+              <textarea data-template="">
+                  [![Skynet](https://img.youtube.com/vi/09Hec3OFzJI/0.jpg)](https://www.youtube.com/watch?v=09Hec3OFzJI "Skynet")
+                </textarea>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h3>Reference 2</h3>
+          <div class="container">
+            <div class="col" data-markdown>
+              <textarea data-template>
+                [![DeepInstinct](https://img.youtube.com/vi/tRzqK315osE/0.jpg)](https://www.youtube.com/watch?v=tRzqK315osE "DeepInstinct")
+        </textarea>
+            </div>
+            <div class="col" data-markdown>
+              <textarea data-template="">
+                  [![Education](https://img.youtube.com/vi/pHvnSo6sip4/0.jpg)](https://www.youtube.com/watch?v=pHvnSo6sip4 "Education")
+                </textarea>
+            </div>
+          </div>
+        </section>
       </section>
 
       <!-- Oil and Gas -->
@@ -332,10 +955,51 @@ CPU hardware.
           <h2>Oil and Gas</h2>
         </section>
         <section data-markdown><textarea data-template>
-        - Shrinking reserves, need optimization
-        - AI forecasts drilling sites (economic, weather, seismic data)
-        - Example: ExxonMobil & MIT — AI submersible robots
+        ### Traditionally
+        - Price has fallen dramatically in
+recent years.
+        - Forcing company layoffs and
+drastic budget cuts. 
+        - Ultimately, companies are in
+great need of optimizing
+operations and cost.
         </textarea></section>
+        <section data-markdown><textarea data-template>
+        ### Now with AI
+        - AI uses economic, political and weather data to forecast
+optimum production locations.
+        - Drilling is still an expensive and
+risk-prone endeavor.
+        - ML, with seismic, thermal and
+strata data, can help optimize
+the drilling process.
+        </textarea></section>
+        <section data-markdown><textarea data-template>
+        ### Example 
+        - ExxonMobile and MIT developing “submersible” robots
+for exploration.
+        - AI robots are used in ocean exploration
+to detect “natural seep”.
+        - Robots are trained via DL techniques
+and learn from their mistakes.
+        - Simultaneously protect the ecosystem
+and detect new energy resources.
+        </textarea></section>
+        <section>
+          <h3>Reference </h3>
+          <div class="container">
+            <div class="col" data-markdown>
+              <textarea data-template>
+                [![ExxonMobile](https://img.youtube.com/vi/PxgaYr5zFiY/0.jpg)](https://www.youtube.com/watch?v=PxgaYr5zFiY "ExxonMobile")
+        </textarea>
+            </div>
+            <div class="col" data-markdown>
+              <textarea data-template="">
+                  [![Drilling](https://img.youtube.com/vi/6V5GXk4zrXY/0.jpg)](https://www.youtube.com/watch?v=6V5GXk4zrXY "Drilling")
+                </textarea>
+            </div>
+          </div>
+        </section>
       </section>
 
       <!-- Other Applications -->
@@ -344,10 +1008,64 @@ CPU hardware.
           <h2>Other Applications</h2>
         </section>
         <section data-markdown><textarea data-template>
-        - Customer service: AI assistants, routing, automation
-        - Music: "I AM AI" album (2017), DL-based generation
-        - Gaming: Forza 5 Drivatar, reinforcement learning characters
+        ### Example 1
+        - AI and Customer Service
+        - Bot assistants and customer service agents
+        - Some companies have used AI to
+fully automate customer service.
         </textarea></section>
+         <section data-markdown><textarea data-template>
+        ### Example 2
+        - "I AM AI", first album released in 2017 to be generated by AI –
+with professional musicians and DL technology.
+        - Music generation is possible due to special
+DL algorithms that are designed for
+sequential data.
+        - The models learn musical patterns based
+on learning from large musical datasets. 
+        - Raw music files can be processed on cloudbased computer power, making DL on these
+datasets possible.
+        </textarea></section>
+         <section data-markdown><textarea data-template>
+        ### Example 3
+        - Forza 5 Motorsport* uses its “Drivatar” AI system to
+learn how to drive in the style of other players in the game.
+        - Neural networks are used to train
+characters to walk and run realistically.
+        - Reinforcement Learning (RL) is a technique
+used throughout gaming.
+        </textarea></section>
+                        <section>
+          <h3>Reference 1</h3>
+          <div class="container">
+            <div class="col" data-markdown>
+              <textarea data-template>
+                [![I am AI](https://img.youtube.com/vi/Emidxpkyk6o/0.jpg)](https://www.youtube.com/watch?v=Emidxpkyk6o "I am AI")
+        </textarea>
+            </div>
+            <div class="col" data-markdown>
+              <textarea data-template="">
+                  [![Joshen Huang](https://img.youtube.com/vi/DFjajviMbtM/0.jpg)](https://www.youtube.com/watch?v=DFjajviMbtM "Joshen Huang")
+                </textarea>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h3>Reference 2</h3>
+          <div class="container">
+            <div class="col" data-markdown>
+              <textarea data-template>
+                [![Move 37](https://img.youtube.com/vi/HT-UZkiOLv8/0.jpg)](https://www.youtube.com/watch?v=HT-UZkiOLv8 "Move 37")
+        </textarea>
+            </div>
+            <div class="col" data-markdown>
+              <textarea data-template="">
+                  [![NEAT](https://img.youtube.com/vi/wQWWzBHUJWM/0.jpg)](https://www.youtube.com/watch?v=wQWWzBHUJWM "NEAT")
+                </textarea>
+            </div>
+          </div>
+        </section>
       </section>
 
       <!-- Recap -->
