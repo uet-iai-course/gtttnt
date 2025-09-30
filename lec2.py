@@ -1,7 +1,11 @@
-def add_to_list(item:str, target: list[str]=[]):
-    target.append(item)
-    return target
+a = {
+    "name": "va",
+    "age": 10
+}
 
-l1= add_to_list("James")
-add_to_list("Sandra")
-print(l1)
+if "course" in a:
+    print(a["course"])
+else:
+    print("no_course")
+
+print(a.get("course", "no_course"))

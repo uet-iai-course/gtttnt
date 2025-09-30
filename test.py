@@ -18,8 +18,8 @@ a = "hello"
 print(id(a))
 
 # String
-s = "élève"
 print(len("élève"))
+print(len("élève"))
 
 
 # Test
