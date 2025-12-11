@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CRISP-DM — Vòng đời dự án Data Science (50 slides)</title>
+    <link href="revealjs/dist/reset.css" rel="stylesheet" />
+    <link href="revealjs/dist/reveal.css" rel="stylesheet" />
+    <link href="revealjs/dist/theme/white.css" rel="stylesheet" />
+    <link href="plugin/highlight/monokai.css" rel="stylesheet" />
+    <link href="lecture-style.css" rel="stylesheet">
+    <style>
+        /* Nhỏ: giữ font-size tương tự template, slide number */
+        .reveal { font-size: 1.6rem; }
+        h1, h2 { line-height: 1.2; }
+        ul { text-align: left; }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Title -->
+            <section>
+                <h1>CRISP-DM: Vòng đời dự án Data Science</h1>
+                <p><strong>Giảng viên:</strong> (tên bạn)</p>
+                <p>Tổng quan 50 slide — Mô tả 6 pha, tương tác, chú ý Business Understanding & Deployment</p>
+            </section>
+
+            <!-- Slide 1 -->
+            <section>
+                <h2>1 • Giới thiệu CRISP-DM</h2>
+                <ul>
+                    <li>CRISP-DM là khuôn khổ chuẩn cho dự án khai thác dữ liệu và khoa học dữ liệu.</li>
+                    <li>Nội dung chia thành sáu pha: Business Understanding, Data Understanding, Data Preparation.</li>
+                    <li>Tiếp theo: Modeling, Evaluation, Deployment — vòng đời lặp đi lặp lại.</li>
+                    <li>Mục tiêu: tăng tính lặp lại, giảm rủi ro, cải thiện hiệu quả dự án dữ liệu.</li>
+                    <li>Tài liệu tham khảo chính mô tả chi tiết pha và công việc liên quan.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 2 -->
+            <section>
+                <h2>2 • Tại sao cần quy trình?</h2>
+                <ul>
+                    <li>Quy trình chuẩn giúp tổ chức công việc, phân vai, lập kế hoạch rõ ràng.</li>
+                    <li>Giảm sai sót kỹ thuật và hiểu sai yêu cầu kinh doanh khi triển khai mô hình.</li>
+                    <li>Tạo hồ sơ thu thập, kiểm tra chất lượng dữ liệu và các quyết định xử lý dữ liệu.</li>
+                    <li>Tăng khả năng tái sử dụng kết quả, lặp cải thiện và bảo trì mô hình sau triển khai.</li>
+                    <li>CRISP-DM cung cấp ngôn ngữ chung giữa business và data team.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 3 -->
+            <section>
+                <h2>3 • Khái quát sáu pha</h2>
+                <ul>
+                    <li>Business Understanding: xác định mục tiêu kinh doanh và thành công dự án.</li>
+                    <li>Data Understanding: thu thập, miêu tả và kiểm tra chất lượng dữ liệu.</li>
+                    <li>Data Preparation: chọn, làm sạch, chuyển đổi và tích hợp dữ liệu cho mô hình.</li>
+                    <li>Modeling: chọn thuật toán, huấn luyện và điều chỉnh tham số mô hình.</li>
+                    <li>Evaluation & Deployment: đánh giá kết quả, lập kế hoạch và triển khai mô hình vào sản xuất.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 4 -->
+            <section>
+                <h2>4 • Bản chất lặp của CRISP-DM</h2>
+                <ul>
+                    <li>CRISP-DM nhấn mạnh tính lặp: kết quả mỗi pha có thể dẫn trở lại pha trước đó.</li>
+                    <li>Ví dụ: kết quả modeling có thể yêu cầu thêm dữ liệu hoặc chỉnh business goal.</li>
+                    <li>Chu trình tương tác giữa pha giúp tinh chỉnh giả thuyết và cải thiện chất lượng kết quả.</li>
+                    <li>Không phải dòng thẳng — là vòng lặp thực hành, thăm dò và xác nhận.</li>
+                    <li>Tính lặp đảm bảo mô hình phù hợp với mục tiêu kinh doanh thực tế.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 5 -->
+            <section>
+                <h2>5 • Business Understanding — mục đích</h2>
+                <ul>
+                    <li>Xác định mục tiêu kinh doanh cao nhất và cách mô hình dữ liệu hỗ trợ mục tiêu đó.</li>
+                    <li>Biến mục tiêu kinh doanh thành mục tiêu data mining/khoa học dữ liệu cụ thể.</li>
+                    <li>Thiết lập tiêu chí thành công và các ràng buộc, nguồn lực dự án.</li>
+                    <li>Lập kế hoạch dự án gồm timeline, milestones và phân công vai trò rõ ràng.</li>
+                    <li>Business Understanding là nền tảng để tránh phát triển mô hình không phù hợp.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 6 -->
+            <section>
+                <h2>6 • Business Understanding — tác vụ cụ thể</h2>
+                <ul>
+                    <li>Định nghĩa vấn đề kinh doanh bằng ngôn ngữ phi kỹ thuật, xác định stakeholder chính.</li>
+                    <li>Đặt mục tiêu dự án và các chỉ số thành công định lượng (KPIs) cần tối ưu.</li>
+                    <li>Đánh giá tình trạng sẵn có dữ liệu và rủi ro tiềm ẩn về pháp lý, đạo đức.</li>
+                    <li>Xác định giới hạn, giả định và điều kiện thành công cho thử nghiệm kỹ thuật.</li>
+                    <li>Lập kế hoạch tài nguyên, công cụ, kỹ năng cần thiết cho toàn bộ dự án.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 7 -->
+            <section>
+                <h2>7 • Data Understanding — mục tiêu</h2>
+                <ul>
+                    <li>Tập trung vào việc thu thập thông tin về dữ liệu sẵn có và các nguồn dữ liệu khác.</li>
+                    <li>Mô tả dữ liệu sơ bộ: cấu trúc, kích thước, kiểu biến và phân phối ban đầu.</li>
+                    <li>Khám phá dữ liệu để phát hiện mẫu, vấn đề chất lượng, ngoại lệ và thiếu dữ liệu.</li>
+                    <li>Xác nhận giả thuyết kinh doanh ban đầu dựa trên phân tích dữ liệu thăm dò.</li>
+                    <li>Data Understanding là bước quan trọng để thiết kế Data Preparation hợp lý.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 8 -->
+            <section>
+                <h2>8 • Data Understanding — các hoạt động</h2>
+                <ul>
+                    <li>Thu thập dữ liệu mẫu từ các hệ thống nguồn, lưu trữ tạm và meta-data liên quan.</li>
+                    <li>Miêu tả thống kê: trung bình, phân vị, phương sai, tần suất, phân bố nhãn.</li>
+                    <li>Khám phá mối quan hệ giữa biến, kiểm tra hiệp phương sai, tương quan đa biến.</li>
+                    <li>Kiểm tra chất lượng: missing values, duplicates, inconsistent formats, outliers.</li>
+                    <li>Lưu kết quả khám phá để ra quyết định ở pha chuẩn bị dữ liệu.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 9 -->
+            <section>
+                <h2>9 • Data Preparation — mục tiêu</h2>
+                <ul>
+                    <li>Chuẩn bị bộ dữ liệu cuối cùng mà mô hình sẽ sử dụng để huấn luyện và đánh giá.</li>
+                    <li>Thực hiện chọn biến, mã hóa, chuẩn hóa, làm đầy giá trị thiếu và xử lý ngoại lệ.</li>
+                    <li>Tích hợp dữ liệu từ nhiều nguồn, tạo feature mới dựa trên domain knowledge.</li>
+                    <li>Đảm bảo dữ liệu đầu vào phù hợp với yêu cầu kỹ thuật của thuật toán.</li>
+                    <li>Ghi lại quy trình chuẩn bị để tái tạo và đảm bảo tính reproduceable của pipeline.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 10 -->
+            <section>
+                <h2>10 • Data Preparation — các tác vụ</h2>
+                <ul>
+                    <li>Chọn dữ liệu và các cột phù hợp, loại bỏ dữ liệu dư thừa hoặc không liên quan.</li>
+                    <li>Làm sạch: sửa lỗi, loại bỏ duplicate, chuẩn hóa định dạng ngày giờ và unit.</li>
+                    <li>Biến đổi: scaling, normalization, log-transform, binning và feature engineering.</li>
+                    <li>Xử lý missing: xóa, imputate với mean/median/mode hoặc mô hình dự đoán.</li>
+                    <li>Tách train/val/test đảm bảo không rò rỉ thông tin giữa các tập dữ liệu.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 11 -->
+            <section>
+                <h2>11 • Data Preparation — tích hợp & tài liệu</h2>
+                <ul>
+                    <li>Kết hợp bảng từ nhiều nguồn, xử lý khóa ngoại và đồng bộ hóa time stamps.</li>
+                    <li>Tạo metadata rõ ràng: nguồn trường, cách tính, biến tạm và biến cảm tính.</li>
+                    <liĐ> Ghi chép quyết định xử lý, giả định và các bước tiền xử lý cho reproducibility.</li>
+                    <li>Thiết kế pipeline có thể tự động hóa, kiểm thử và dễ bảo trì khi có dữ liệu mới.</li>
+                    <li>Chuẩn bị dữ liệu theo lô (batch) hoặc streaming tùy yêu cầu triển khai thực tế.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 12 -->
+            <section>
+                <h2>12 • Modeling — mục tiêu</h2>
+                <ul>
+                    <li>Chọn phương pháp modeling phù hợp với loại bài toán và dữ liệu sẵn có.</li>
+                    <li>Huấn luyện mô hình thử nghiệm, điều chỉnh siêu tham số để tối ưu performance.</li>
+                    <li>So sánh nhiều thuật toán bằng các metric phù hợp với mục tiêu kinh doanh.</li>
+                    <li>Ghi chú ưu/nhược điểm của mỗi mô hình và khả năng giải thích/triển khai.</li>
+                    <li>Mục tiêu cuối cùng là tìm mô hình đáp ứng tiêu chí thành công đã định nghĩa.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 13 -->
+            <section>
+                <h2>13 • Modeling — chọn kỹ thuật</h2>
+                <ul>
+                    <li>Chọn thuật toán phân loại, hồi quy, clustering, hoặc phương pháp nâng cao tuỳ mục tiêu.</li>
+                    <li>Xem xét tính giải thích, hiệu năng, thời gian huấn luyện, yêu cầu tài nguyên.</li>
+                    <li>Ưu tiên thử nghiệm nhiều family thuật toán để tránh phụ thuộc vào một phương pháp duy nhất.</li>
+                    <li>Chuẩn bị quy trình cross-validation, stratification và metric đo lường công bằng.</li>
+                    <li>Thực hiện feature selection và regularization để tránh overfitting khi cần.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 14 -->
+            <section>
+                <h2>14 • Modeling — huấn luyện & tối ưu</h2>
+                <ul>
+                    <li>Huấn luyện mô hình trên tập train, điều chỉnh hyperparameters theo tập validation.</li>
+                    <li>Sử dụng kỹ thuật tối ưu hóa: grid search, random search, hoặc Bayesian optimization.</li>
+                    <li>Áp dụng kỹ thuật regularization, ensemble để cải thiện khả năng tổng quát hóa.</li>
+                    <li>Lưu model checkpoints, theo dõi loss, metric và hành vi học trong quá trình huấn luyện.</li>
+                    <li>Đảm bảo tái tạo kết quả: seed, phiên bản thư viện và môi trường thực thi.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 15 -->
+            <section>
+                <h2>15 • Evaluation — mục tiêu</h2>
+                <ul>
+                    <li>Đánh giá mô hình toàn diện trên metric liên quan tới business và metric kỹ thuật.</li>
+                    <li>Xác nhận mô hình thực sự giải quyết vấn đề kinh doanh và tuân thủ tiêu chí thành công.</li>
+                    <li>Kiểm tra bias/variance, robustness, sensitivity với dữ liệu thay đổi.</li>
+                    <li>Xem xét rủi ro, lỗi, và khả năng mô hình phản tác dụng khi triển khai.</li>
+                    <li>Tài liệu hóa kết luận, giới hạn và khuyến nghị trước khi triển khai.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 16 -->
+            <section>
+                <h2>16 • Evaluation — kiểm thử</h2>
+                <ul>
+                    <li>Sử dụng tập test độc lập để đo lường hiệu năng cuối cùng và tính tổng quát.</li>
+                    <li>Phân tích lỗi: loại lỗi thường gặp, phân bố theo nhóm người dùng hay điều kiện.</li>
+                    <li>Kiểm tra fairness, drift, và performance theo các phân khúc quan trọng của khách hàng.</li>
+                    <li>Thực hiện kiểm thử stress, kiểm thử corner-case và kiểm thử an toàn nếu cần.</li>
+                    <li>Kết luận đánh giá phải liên kết rõ ràng với mục tiêu kinh doanh ban đầu.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 17 -->
+            <section>
+                <h2>17 • Deployment — mục tiêu</h2>
+                <ul>
+                    <li>Đưa mô hình từ môi trường phát triển vào môi trường sản xuất để tạo giá trị thực.</li>
+                    <li>Xây dựng kế hoạch triển khai: tích hợp, monitoring, rollback, và kế hoạch bảo trì.</li>
+                    <li>Đảm bảo vận hành: API, batch jobs, pipeline, hoặc embedded deployment theo yêu cầu.</li>
+                    <li>Thiết lập đo lường sau triển khai để theo dõi KPI và hiệu quả kinh doanh.</li>
+                    <li>Deployment cần xem như phần thiết yếu, không phải bước phụ sau cùng.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 18 -->
+            <section>
+                <h2>18 • Deployment — lưu ý kỹ thuật</h2>
+                <ul>
+                    <li>Chuẩn hóa model artifacts: phiên bản model, config, preprocessing steps, và metadata.</li>
+                    <li>Thiết kế API/serving layer, scaling, caching và thực thi với SLA yêu cầu.</li>
+                    <li>Đảm bảo pipeline tiền xử lý giống hệt giữa huấn luyện và phục vụ.</li>
+                    <li>Chuẩn bị rollback plan nếu mô hình mới gây suy giảm KPI sản xuất.</li>
+                    <li>Giám sát drift dữ liệu, degradations và cảnh báo tự động cho engineering team.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 19 -->
+            <section>
+                <h2>19 • Deployment — vận hành & giám sát</h2>
+                <ul>
+                    <li>Giám sát metric model: latency, throughput, accuracy, precision, recall theo thời gian.</li>
+                    <li>Thiết lập alerts khi performance tụt dưới threshold hoặc khi dữ liệu drift.</li>
+                    <li>Thu thập logs và trace để liên kết predictions với dữ liệu đầu vào cho debugging.</li>
+                    <li>Xây dựng quy trình retrain định kỳ hoặc theo trigger khi performance giảm.</li>
+                    <li>Đảm bảo quản trị quyền truy cập và an toàn dữ liệu trong môi trường sản xuất.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 20 -->
+            <section>
+                <h2>20 • Traceability & Reproducibility</h2>
+                <ul>
+                    <li>Ghi lại mọi bước: data sources, preprocessing, hyperparameters, code và model versions.</li>
+                    <li>Phân biệt experiment vs production; lưu artifacts để minh chứng kết quả.</li>
+                    <li>Sử dụng version control cho code, data snapshot và model registry để quản lý phiên bản.</li>
+                    <li>Reproducibility giúp audit, debug và đáp ứng yêu cầu tuân thủ (compliance).</li>
+                    <li>CRISP-DM khuyến khích ghi chép chi tiết ở mọi pha dự án.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 21 -->
+            <section>
+                <h2>21 • Vai trò stakeholder</h2>
+                <ul>
+                    <li>Stakeholder kinh doanh xác định mục tiêu, đánh giá rủi ro và nhận kết quả cuối cùng.</li>
+                    <li>Data engineers chuẩn bị dữ liệu, duy trì pipeline và đảm bảo chất lượng dữ liệu.</li>
+                    <li>Data scientists/ML engineers xây dựng, thử nghiệm, triển khai và giám sát mô hình.</li>
+                    <li>Legal/Compliance đánh giá quyền riêng tư dữ liệu, tuân thủ luật và chuẩn mực đạo đức.</li>
+                    <li>Quản lý dự án điều phối timeline, nguồn lực và liên lạc giữa nhóm.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 22 -->
+            <section>
+                <h2>22 • Rủi ro thường gặp</h2>
+                <ul>
+                    <li>Thiếu hoặc dữ liệu chất lượng kém dẫn đến mô hình sai lệch kết luận.</li>
+                    <li>Không xác định rõ mục tiêu kinh doanh dẫn đến mô hình không sử dụng được.</li>
+                    <li>Overfitting/underfitting do thiết kế thử nghiệm, phân chia dữ liệu kém.</li>
+                    <li>Rủi ro triển khai: latency, scaling và phiền hà tích hợp vào hệ thống hiện có.</li>
+                    <li>Vấn đề đạo đức, riêng tư và pháp lý nếu xử lý dữ liệu nhạy cảm không đúng cách.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 23 -->
+            <section>
+                <h2>23 • CRISP-DM và EDA</h2>
+                <ul>
+                    <li>Data Understanding bao gồm EDA — khám phá dữ liệu để tìm insight ban đầu.</li>
+                    <li>EDA giúp phát hiện mối quan hệ, phân bố, outliers và dữ liệu bất thường khác.</li>
+                    <li>Kết quả EDA dẫn đến các quyết định feature engineering và tiền xử lý trong Data Preparation.</li>
+                    <li>Tools: pandas, matplotlib, seaborn, và thư viện tương tự để trực quan hóa nhanh.</li>
+                    <li>Ghi lại kết quả EDA cho báo cáo Business Understanding và quyết định tiếp theo.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 24 -->
+            <section>
+                <h2>24 • Feature engineering trong CRISP-DM</h2>
+                <ul>
+                    <li>Feature engineering là bước then chốt trong Data Preparation để cải thiện predictive power.</li>
+                    <li>Kỹ thuật: polynomial features, interaction terms, encoding, time-based aggregations, embeddings.</li>
+                    <li>Domain knowledge đóng vai trò quan trọng trong việc thiết kế feature hữu dụng.</li>
+                    <li>Thử nghiệm nhiều biến mới, đánh giá bằng validation để tránh leak thông tin.</li>
+                    <li>Tài liệu hóa cách tạo feature để duy trì khi tái huấn luyện hoặc triển khai.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 25 -->
+            <section>
+                <h2>25 • Cross-validation & đánh giá ổn định</h2>
+                <ul>
+                    <li>Cross-validation giúp đánh giá tính tổng quát của mô hình trên nhiều split dữ liệu.</li>
+                    <li>Chọn chiến lược phù hợp: k-fold, stratified, time-series split nếu dữ liệu thời gian.</li>
+                    <li>Đo lường variance giữa các fold để đánh giá ổn định và rủi ro overfitting.</li>
+                    <li>Use proper metrics aligned với business objective: AUC, recall, F1, RMSE, v.v.</li>
+                    <li>Kết quả CV là cơ sở cho so sánh thuật toán và lựa chọn mô hình cuối cùng.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 26 -->
+            <section>
+                <h2>26 • Tương tác giữa pha Modeling và Data Preparation</h2>
+                <ul>
+                    <li>Kết quả modeling thường chỉ ra thiếu feature hoặc dữ liệu cần xử lý thêm.</li>
+                    <li>Modeling → quay lại Data Preparation để bổ sung hoặc tinh chỉnh biến đầu vào.</li>
+                    <li>Chu trình lặp này giúp cải thiện hiệu năng mô hình theo hướng có căn cứ.</li>
+                    <li>Việc này minh họa bản chất thăm dò và khám phá của dự án khoa học dữ liệu.</li>
+                    <li>Ghi nhận các lần lặp và kết quả để so sánh và học hỏi cho dự án tiếp theo.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 27 -->
+            <section>
+                <h2>27 • Business Understanding thường bị bỏ quên</h2>
+                <ul>
+                    <li>Nhiều dự án tập trung kỹ thuật, nhưng bỏ qua việc liên kết rõ ràng với mục tiêu kinh doanh.</li>
+                    <li>Kết quả: mô hình tốt về mặt kỹ thuật nhưng không giải quyết yêu cầu thực tế doanh nghiệp.</li>
+                    <li>Luôn kiểm tra: mô hình có cải thiện KPI đã định nghĩa ban đầu hay không?</li>
+                    <li>Business Understanding cần lồng vào mọi quyết định kỹ thuật xuyên suốt dự án.</li>
+                    <li>CRISP-DM nhấn mạnh bắt đầu bằng business và quay lại business để đánh giá.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 28 -->
+            <section>
+                <h2>28 • Deployment thường bị đánh giá thấp</h2>
+                <ul>
+                    <li>Triển khai là giai đoạn thực hiện giá trị — nhưng thường bị coi nhẹ trong kế hoạch.</li>
+                    <li>Nếu không tính đến deployment ban đầu, mô hình có thể không phù hợp hạ tầng doanh nghiệp.</li>
+                    <li>Thiếu giám sát và kế hoạch vận hành dẫn tới mất giá trị sau khi đi vào production.</li>
+                    <li>Kế hoạch deployment nên được xây dựng ngay từ Business Understanding và Data Preparation.</li>
+                    <li>CRISP-DM kêu gọi coi deployment như phần không thể thiếu của vòng đời dự án.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 29 -->
+            <section>
+                <h2>29 • Tích hợp domain knowledge</h2>
+                <ul>
+                    <li>Domain experts giúp định nghĩa features, giả thuyết và tiêu chí thành công phù hợp.</li>
+                    <li>Thông tin domain làm hướng dẫn cho Data Understanding và việc xử lý dữ liệu đặc thù.</li>
+                    <li>Thiết kế biến dựa trên hiểu biết nghiệp vụ thường hiệu quả hơn kỹ thuật thuần túy.</li>
+                    <li>Giao tiếp liên tục giữa data team và domain experts là yếu tố then chốt.</li>
+                    <li>Domain knowledge góp phần vào giải thích mô hình và chấp nhận kết quả bởi business.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 30 -->
+            <section>
+                <h2>30 • Ethics & privacy trong CRISP-DM</h2>
+                <ul>
+                    <li>Đánh giá đạo đức và quyền riêng tư là bắt buộc, đặc biệt với dữ liệu cá nhân.</li>
+                    <li>Business Understanding phải xác định giới hạn sử dụng dữ liệu và yêu cầu tuân thủ pháp luật.</li>
+                    <li>Data Preparation cần anonymization, pseudonymization khi xử lý dữ liệu nhạy cảm.</li>
+                    <li>Deployment phải bảo đảm quyền truy cập, logging và auditing hợp lệ theo quy định.</li>
+                    <li>CRISP-DM gợi ý cân nhắc rủi ro đạo đức xuyên suốt vòng đời dự án.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 31 -->
+            <section>
+                <h2>31 • Tài liệu và báo cáo (reporting)</h2>
+                <ul>
+                    <li>Lưu trữ báo cáo EDA, quyết định preprocessing, mô tả mô hình và metric cuối cùng.</li>
+                    <li>Báo cáo nên tách nội dung kỹ thuật và nội dung business-friendly cho stakeholder.</li>
+                    <li>Tài liệu giúp audit, tái thực hiện và truyền đạt các giả định quan trọng.</li>
+                    <li>CRISP-DM khuyến khích tạo deliverables cho mỗi pha để minh bạch tiến trình.</li>
+                    <li>Báo cáo cuối cùng cần nêu rõ giới hạn, khuyến nghị và kế hoạch cải tiến tiếp theo.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 32 -->
+            <section>
+                <h2>32 • Tối ưu chi phí & lựa chọn công nghệ</h2>
+                <ul>
+                    <li>Business Understanding phải xác định giới hạn chi phí, ROI kỳ vọng và nguồn lực công nghệ.</li>
+                    <li>Lựa chọn công nghệ ảnh hưởng đến khả năng deploy, scale và bảo trì mô hình sau này.</li>
+                    <li>So sánh chi phí cloud vs on-premise, batch vs real-time để phù hợp nhu cầu kinh doanh.</li>
+                    <li>Cân nhắc công cụ MLOps, CI/CD, model registry để tự động hóa lifecycle.</li>
+                    <li>Quyết định kỹ thuật cần liên kết với mục tiêu chiến lược và ngân sách doanh nghiệp.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 33 -->
+            <section>
+                <h2>33 • MLOps & vận hành mô hình</h2>
+                <ul>
+                    <li>MLOps cung cấp công cụ và quy trình tự động hoá cho deployment, giám sát và retraining.</li>
+                    <li>Gồm CI/CD cho model, data pipelines, test automation và model registry để quản lý artefacts.</li>
+                    <li>MLOps hỗ trợ giảm thời gian từ prototype đến production, tăng độ tin cậy vận hành.</li>
+                    <li>CRISP-DM có thể được tích hợp vào workflow MLOps để quản lý toàn bộ vòng đời.</li>
+                    <li>Giám sát sau deployment là bước then chốt để đảm bảo giá trị liên tục.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 34 -->
+            <section>
+                <h2>34 • Tái đào tạo & chiến lược duy trì</h2>
+                <ul>
+                    <li>Thiết lập chỉ số trigger cho retraining khi dữ liệu drift hoặc performance giảm.</li>
+                    <li>Lập lịch retrain định kỳ nếu dữ liệu thay đổi theo mùa hoặc xu hướng dài hạn.</li>
+                    <li>Bảo lưu dữ liệu huấn luyện cũ và theo dõi phiên bản model đã triển khai.</li>
+                    <li>Lập quy trình A/B test để đánh giá model mới trước khi rollout toàn bộ.</li>
+                    <li>Document các điều kiện cần để bắt đầu retraining và validate model mới.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 35 -->
+            <section>
+                <h2>35 • KPI và đo lường hiệu quả</h2>
+                <ul>
+                    <li>Xác định KPI liên kết trực tiếp với business (ví dụ tăng conversion, giảm churn rate).</li>
+                    <li>Thiết kế experiment để đo causal impact của mô hình trên KPI thực tế.</li>
+                    <li>Sử dụng A/B testing, lift analysis để khẳng định giá trị mô hình khi deployed.</li>
+                    <li>Ghi nhận metric trước và sau triển khai để đánh giá ROI và tác động lâu dài.</li>
+                    <li>KPI phải được theo dõi liên tục để đánh giá thành công chiến lược triển khai.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 36 -->
+            <section>
+                <h2>36 • Quản lý dữ liệu & data lineage</h2>
+                <ul>
+                    <li>Ghi nhận nguồn gốc dữ liệu, biến đổi qua pipeline và lưu trữ metadata đầy đủ.</li>
+                    <li>Data lineage giúp truy vết lỗi, thực hiện audit và đảm bảo tính minh bạch.</li>
+                    <li>Sử dụng data catalog, bảng schema và logging để quản lý luồng dữ liệu.</li>
+                    <li>CRISP-DM nhấn mạnh hiểu rõ nguồn dữ liệu ở pha Data Understanding.</li>
+                    <li>Lineage cũng hỗ trợ cho việc tuân thủ quy định và giải thích quyết định mô hình.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 37 -->
+            <section>
+                <h2>37 • Quy trình kiểm soát chất lượng (QA)</h2>
+                <ul>
+                    <li>Xây dựng tests cho pipeline: unit tests, integration tests, data quality checks.</li>
+                    <li>Kiểm thử mô hình bằng test harness, test on synthetic và real-world edge cases.</li>
+                    <li>CI pipeline chạy checks tự động trước khi merge code hoặc deploy model.</li>
+                    <li>QA giảm rủi ro khi nâng cấp model và đảm bảo tính ổn định môi trường production.</li>
+                    <li>Tài liệu kết quả tests phục vụ audit và cải tiến liên tục.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 38 -->
+            <section>
+                <h2>38 • Quy trình ra quyết định dựa trên dữ liệu</h2>
+                <ul>
+                    <li>Business Understanding định nghĩa quyết định cần tối ưu bằng dữ liệu.</li>
+                    <li>Dữ liệu và mô hình chỉ là công cụ — quyết định cuối cùng thuộc về stakeholder kinh doanh.</li>
+                    <li>Trình bày kết quả đơn giản, trực quan để hỗ trợ quyết định có căn cứ dữ liệu.</li>
+                    <li>Đánh giá rủi ro, chi phí triển khai và tác động chiến lược trước khi rollout.</li>
+                    <li>CRISP-DM giúp liên kết chặt chẽ giữa phân tích kỹ thuật và quyết định kinh doanh.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 39 -->
+            <section>
+                <h2>39 • Tương tác con người-máy (explainability)</h2>
+                <ul>
+                    <li>Giải thích mô hình (XAI) quan trọng để stakeholder hiểu lý do ra quyết định.</li>
+                    <li>Chọn mô hình hoặc kỹ thuật giải thích phù hợp với yêu cầu minh bạch.</li>
+                    <li>Feature importance, SHAP, LIME là công cụ phổ biến để giải thích predictions.</li>
+                    <li>Explainability hỗ trợ trust, compliance và phát hiện bias trong mô hình.</li>
+                    <li>Ghi lại cách thức giải thích và báo cáo cho các audience khác nhau.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 40 -->
+            <section>
+                <h2>40 • Casestudy ngắn: dự án churn</h2>
+                <ul>
+                    <li>Business Understanding: giảm churn 5% trong 6 tháng, KPI: churn rate, LTV.</li>
+                    <li>Data Understanding: thu thập lịch sử giao dịch, tương tác, thông tin khách hàng.</li>
+                    <li>Data Preparation: feature engineering hành vi, tần suất, thời gian kể từ tương tác cuối cùng.</li>
+                    <li>Modeling: thử Random Forest, Logistic Regression, tối ưu bằng CV và calibration.</li>
+                    <li>Deployment: scoring hàng ngày, alert cho đội retention, giám sát lift theo thời gian.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 41 -->
+            <section>
+                <h2>41 • Casestudy ngắn: dự án phát hiện gian lận</h2>
+                <ul>
+                    <li>Business Understanding: giảm tỷ lệ gian lận, cân bằng false positives và operational cost.</li>
+                    <li>Data Understanding: thu thập giao dịch, thiết bị, lịch sử tài khoản và vết tương tác.</li>
+                    <li>Data Preparation: xử lý imbalance, undersampling/oversampling, tạo rules feature đặc trưng.</li>
+                    <li>Modeling: ensemble methods, threshold tuning, ROC/AUC và precision@k để đánh giá.</li>
+                    <li>Deployment: streaming scoring, human-in-the-loop review, feedback loop để cập nhật model.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 42 -->
+            <section>
+                <h2>42 • Lessons learned từ CRISP-DM</h2>
+                <ul>
+                    <li>Bắt đầu bằng business, không bắt đầu bằng thuật toán — để đảm bảo tạo ra giá trị thực.</li>
+                    <li>Ghi chép và reproducibility là chìa khóa để duy trì và mở rộng hệ thống.</li>
+                    <li>Tương tác lặp giữa pha là cần thiết để cải thiện chất lượng cuối cùng.</li>
+                    <li>Deployment và giám sát phải được thiết kế ngay từ đầu, không phải là bước phụ.</li>
+                    <li>CRISP-DM cung cấp khung hướng dẫn đã được công nghiệp công nhận trong thực tế.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 43 -->
+            <section>
+                <h2>43 • Mở rộng CRISP-DM cho Data Science hiện đại</h2>
+                <ul>
+                    <li>CRISP-DM có thể tích hợp MLOps, CI/CD, dataset versioning và automations hiện đại.</li>
+                    <li>Thêm bước governance, model cards, datasheets để đáp ứng yêu cầu minh bạch và compliance.</li>
+                    <li>Hỗ trợ streaming data, real-time evaluation và continuous training trong các hệ thống hiện đại.</li>
+                    <li>Nhiều nghiên cứu cập nhật CRISP-DM để phù hợp với thay đổi công nghệ và quy định.</li>
+                    <li>Giữ tinh thần CRISP-DM: business-led, iterative và documentation-oriented.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 44 -->
+            <section>
+                <h2>44 • Công cụ hỗ trợ quá trình</h2>
+                <ul>
+                    <li>ETL/ELT: Airflow, dbt; Storage: S3, data lakes; Catalog: Amundsen, DataHub.</li>
+                    <li>Experiment tracking: MLflow, Weights & Biases; Model registry để quản lý artifacts.</li>
+                    <li>Serving: TensorFlow Serving, TorchServe, FastAPI, or serverless endpoints.</li>
+                    <li>Monitoring: Prometheus, Grafana, Evidently để phát hiện drift và giám sát performance.</li>
+                    <li>Chọn tool phù hợp với scale, team skills và yêu cầu tuân thủ của dự án.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 45 -->
+            <section>
+                <h2>45 • KPI cho team Data Science</h2>
+                <ul>
+                    <li>KPI đề xuất: thời gian từ prototype tới production, model uptime, precision@k, doanh thu ảnh hưởng.</li>
+                    <li>Đo lường chất lượng dữ liệu: % missing, data freshness, số incidents data issues.</li>
+                    <li>KPI cho deployment: latency, throughput, rollback frequency và MTTR incidents.</li>
+                    <li>KPI cho experiment: improvement over baseline, statistical significance và business impact.</li>
+                    <li>Kết hợp KPI kỹ thuật và business để tối ưu hóa đầu tư cho DS projects.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 46 -->
+            <section>
+                <h2>46 • Chiến lược training đội ngũ</h2>
+                <ul>
+                    <li>Đào tạo holistically: business thinking, data engineering, modeling, MLOps và ethics.</li>
+                    <li>Khuyến khích pair-work giữa data scientists và domain experts để truyền kiến thức.</li>
+                    <li>Thiết lập templates, checklist CRISP-DM để team tuân thủ best practices.</li>
+                    <li>Mentoring và post-mortem review cho các dự án để cải thiện liên tục.</li>
+                    <li>Đảm bảo documentation và playbooks để giảm rủi ro khi turnover nhân sự.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 47 -->
+            <section>
+                <h2>47 • Kiểm soát chất lượng dữ liệu liên tục</h2>
+                <ul>
+                    <li>Thiết lập dữ liệu health checks: schema checks, range checks, anomaly detection tự động.</li>
+                    <li>Alerting khi dữ liệu trượt khỏi giới hạn hợp lệ hoặc missing rate tăng bất thường.</li>
+                    <li>Ghi nhận root cause, feedback loop cho data engineering để xử lý nguồn gốc lỗi.</li>
+                    <li>CRISP-DM yêu cầu kiểm tra chất lượng dữ liệu trong pha Data Understanding.</li>
+                    <li>Kiểm soát liên tục giúp giảm sai sót khi chuyển sang production.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 48 -->
+            <section>
+                <h2>48 • Kết nối CRISP-DM với agile</h2>
+                <ul>
+                    <li>CRISP-DM có thể áp dụng theo sprint nhỏ, lặp nhanh và priority-driven như agile.</li>
+                    <li>Chia milestones theo deliverables: EDA, prototype, MVP, production rollout từng bước.</li>
+                    <li>Sử dụng feedback nhanh từ stakeholders để điều chỉnh mục tiêu trong Business Understanding.</li>
+                    <li>Agile + CRISP-DM giúp giảm time-to-value và tăng khả năng thích ứng với thay đổi.</li>
+                    <li>Đảm bảo documentation mỗi sprint để duy trì reproducibility và traceability.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 49 -->
+            <section>
+                <h2>49 • Tóm tắt chính</h2>
+                <ul>
+                    <li>CRISP-DM: framework thực tiễn gồm sáu pha, nhấn mạnh business-led và iterative lifecycle.</li>
+                    <li>Business Understanding và Deployment thường bị bỏ quên nhưng là then chốt cho giá trị.</li>
+                    <li>Ghi chép, reproducibility, monitoring và governance cần lồng trong mọi pha.</li>
+                    <li>MLOps, automation và tooling hiện đại giúp mở rộng CRISP-DM trong triển khai production.</li>
+                    <li>Luôn liên kết kết quả kỹ thuật với KPI kinh doanh để đánh giá thành công thực tế.</li>
+                </ul>
+            </section>
+
+            <!-- Slide 50: References -->
+            <section>
+                <h2>50 • Tài liệu tham khảo</h2>
+                <ul>
+                    <li>Chapman, P. et al., "CRISP-DM 1.0: Step-by-step data mining guide" — whitepaper (CRISP-DM). :contentReference[oaicite:1]{index=1}</li>
+                    <li>Provost, F. & Fawcett, T., "Data Science for Business" — khung tư duy data-analytic và business alignment. :contentReference[oaicite:2]{index=2}</li>
+                    <li>Witten, I. H., Frank, E., Hall, M., "Data Mining: Practical Machine Learning Tools and Techniques" — kỹ thuật, EDA, modeling. :contentReference[oaicite:3]{index=3}</li>
+                    <li>Bài viết và tài liệu học thuật cập nhật về CRISP-DM và mở rộng cho Data Science hiện đại.</li>
+                    <li>Slide/Template dựa trên style HTML bạn cung cấp; nhớ đặt thư mục revealjs và lecture-style.css cạnh file.</li>
+                </ul>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="revealjs/dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/math/math.js"></script>
+    <script>
+        Reveal.initialize({
+            controlsLayout: "edges",
+            slideNumber: true,
+            hashOneBasedIndex: true,
+            hash: true,
+            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
+        });
+    </script>
+</body>
+</html>
